@@ -2,6 +2,9 @@
 {
   packages = with pkgs; [
     git
+
+    gcc
+    ninja
   ];
 
   languages.python = {
@@ -12,5 +15,15 @@
         conan>=2.25,<3
       '';
     };
+  };
+
+  scripts = {
+    build.exec = ''
+      conan build ${config.devenv.root} $@
+    '';
+
+    clean.exec = ''
+      rm -rf ${config.devenv.root}/build $@
+    '';
   };
 }

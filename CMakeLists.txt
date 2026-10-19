@@ -40,8 +40,21 @@ set(HEADER_FILES
   header/vulkan/structured.hh
 )
 set(SOURCE_FILES
+  source/managed_command-pool.cc
+  source/managed_debug-messenger.cc
+  source/managed_fence.cc
+  source/managed_frame-buffer.cc
+  source/managed_image-view.cc
+  source/managed_instance.cc
+  source/managed_logical-device.cc
+  source/managed_pipeline-layout.cc
+  source/managed_pipeline.cc
+  source/managed_render-pass.cc
+  source/managed_semaphore.cc
+  source/managed_shader-module.cc
+  source/managed_surface.cc
+  source/managed_swapchain.cc
   source/raw.cc
-  source/managed.cc
   source/structured.cc
 )
 
