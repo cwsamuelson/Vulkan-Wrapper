@@ -1,0 +1,34 @@
+#pragma once
+
+namespace flp::Vulkan::Managed {
+
+struct Semaphore {
+  struct Deleter {
+    using pointer = VkSemaphore;
+
+    VkDevice device;
+    RAW::Allocator allocator;
+
+    void operator()(pointer p);
+  };
+
+  using Pointer = std::unique_ptr<Deleter::pointer, Deleter>;
+
+  struct Config {
+    VkDevice device;
+    RAW::Allocator allocator;
+
+    Config&& set_device(VkDevice dev) &&;
+    Config&& set_allocator(RAW::Allocator alloc) &&;
+  };
+
+  [[nodiscard]]
+  static
+  Pointer create(VkDevice device, RAW::Allocator allocator);
+
+  [[nodiscard]]
+  static
+  Pointer create(const Config& config);
+};
+
+}
