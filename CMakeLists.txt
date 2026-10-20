@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 4.0)
-project(${DIR_NAME})
+project(vulkan-wrapper)
 
-find_package(VulkanHeaders REQUIRED)
+find_package(cmake_scripts REQUIRED)
+# find_package(glfw3 REQUIRED)
 find_package(semver REQUIRED)
-find_package(glfw3 REQUIRED)
+find_package(VulkanHeaders REQUIRED)
 
 set(HEADER_FILES
   header/vulkan/managed.hh
@@ -20,7 +21,7 @@ set(HEADER_FILES
   header/vulkan/managed/semaphore.hh
   header/vulkan/managed/shader-module.hh
   header/vulkan/managed/surface.hh
-  header/vulkan/managed/swap-chain.hh
+  header/vulkan/managed/swapchain.hh
   header/vulkan/raw.hh
   header/vulkan/raw/allocator.hh
   header/vulkan/raw/command-pool.hh
@@ -36,7 +37,7 @@ set(HEADER_FILES
   header/vulkan/raw/semaphore.hh
   header/vulkan/raw/shader-module.hh
   header/vulkan/raw/surface.hh
-  header/vulkan/raw/swap-chain.hh
+  header/vulkan/raw/swapchain.hh
   header/vulkan/structured.hh
 )
 set(SOURCE_FILES
@@ -70,9 +71,7 @@ PUBLIC
 
 target_link_libraries(${PROJECT_NAME}
 PUBLIC
-  Vulkan::Headers
+  # glfw::glfw
   semver::semver
-  glfw::glfw
-
-  assert_support
+  Vulkan::Headers
 )

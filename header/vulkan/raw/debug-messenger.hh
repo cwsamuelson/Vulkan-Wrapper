@@ -1,6 +1,8 @@
 #pragma once
 
-namespace flp::Vulkan::raw {
+#include <vulkan/vulkan_core.h>
+
+namespace flp::Vulkan::RAW {
 
 VkDebugUtilsMessengerEXT create_debug_messenger(VkInstance instance, const VkDebugUtilsMessengerCreateInfoEXT* create_info, Allocator pallocator);
 

@@ -1,5 +1,9 @@
 { pkgs, lib, config, inputs, ... }:
 {
+  env = {
+    CONAN_HOME = "${config.devenv.root}/.conan";
+  };
+
   packages = with pkgs; [
     git
 
@@ -13,6 +17,7 @@
       enable = true;
       requirements = ''
         conan>=2.25,<3
+        spdx_license_list
       '';
     };
   };

@@ -1,5 +1,9 @@
 #pragma once
 
+#include <vulkan/vulkan_core.h>
+
+#include <memory>
+
 namespace flp::Vulkan::Managed {
 
 struct Surface {

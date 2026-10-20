@@ -6,9 +6,9 @@
 #include <windows.h>
 #endif
 #define GLFW_INCLUDE_VULKAN
-#include <GLFW/glfw3.h>
-#include <semver.hpp>
-#include <vulkan/vulkan_core.h>
+// #include <GLFW/glfw3.h>
+// #include <semver.hpp>
+// #include <vulkan/vulkan_core.h>
 
 #include "vulkan/raw/allocator.hh"
 #include "vulkan/raw/command-pool.hh"
@@ -24,10 +24,7 @@
 #include "vulkan/raw/semaphore.hh"
 #include "vulkan/raw/shader-module.hh"
 #include "vulkan/raw/surface.hh"
-#include "vulkan/raw/swap-chain.hh"
-
-#include <string>
-#include <vector>
+#include "vulkan/raw/swapchain.hh"
 
 namespace Vulkan::RAW {
 

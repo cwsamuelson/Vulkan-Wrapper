@@ -1,6 +1,12 @@
 #pragma once
 
-namespace flp::Vulkan::raw {
+#include "vulkan/raw/allocator.hh"
+
+#include <vulkan/vulkan_core.h>
+
+#include <cstdint>
+
+namespace flp::Vulkan::RAW {
 
 VkCommandPool create_command_pool(VkDevice device, RAW::Allocator allocator, uint32_t queue_family_index);
 

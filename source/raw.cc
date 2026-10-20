@@ -6,8 +6,8 @@
 
 #include "vulkan/raw.hh"
 
-#include <GLFW/glfw3.h>
-#include <assert_support/assert_support.hh>
+// #include <GLFW/glfw3.h>
+// #include <assert_support/assert_support.hh>
 
 #include <vulkan/vulkan_core.h>
 
@@ -16,15 +16,22 @@
 
 namespace Vulkan::RAW {
 
-DebugMessengerData::DebugMessengerData(VkDebugUtilsMessengerCreateInfoEXT* create_info,
-                                       PFN_vkDebugUtilsMessengerCallbackEXT callback,
-                                       void* data)
+DebugMessengerData::DebugMessengerData(
+  VkDebugUtilsMessengerCreateInfoEXT* create_info,
+  PFN_vkDebugUtilsMessengerCallbackEXT callback,
+  void* data)
   : debug_messenger_create_info(create_info)
   , debug_callback(callback)
   , user_data(data)
 {}
 
-VkInstance create_instance(const std::string& app_name, const semver::version app_version, const std::vector<const char*>& extension_names, const std::vector<const char*>& validation_layer_names, Allocator pallocator, std::optional<DebugMessengerData> debug_messenger_data) {
+VkInstance create_instance(
+  const std::string& app_name,
+  const semver::version app_version,
+  const std::vector<const char*>& extension_names,
+  const std::vector<const char*>& validation_layer_names,
+  Allocator pallocator,
+  std::optional<DebugMessengerData> debug_messenger_data) {
   VkApplicationInfo application_info{};
   application_info.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
   application_info.pApplicationName = app_name.c_str();

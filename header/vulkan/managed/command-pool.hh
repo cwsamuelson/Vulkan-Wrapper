@@ -1,5 +1,12 @@
 #pragma once
 
+#include "vulkan/raw/allocator.hh"
+
+#include <vulkan/vulkan_core.h>
+
+#include <cstdint>
+#include <memory>
+
 namespace flp::Vulkan::Managed {
 
 struct CommandPool {

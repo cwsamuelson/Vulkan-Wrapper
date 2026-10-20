@@ -15,14 +15,14 @@
 #include "vulkan/managed/surface.hh"
 #include "vulkan/managed/swap-chain.hh"
 
-#include <vulkan/vulkan_core.h>
-#include <semver.hpp>
-
-#include <memory>
-#include <optional>
-#include <string>
-#include <string_view>
-#include <vector>
+// #include <vulkan/vulkan_core.h>
+// #include <semver.hpp>
+//
+// #include <memory>
+// #include <optional>
+// #include <string>
+// #include <string_view>
+// #include <vector>
 
 /*struct DataWrapper {
   std::optional<Data> data;

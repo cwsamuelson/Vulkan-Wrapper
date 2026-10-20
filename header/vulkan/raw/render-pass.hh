@@ -1,6 +1,10 @@
 #pragma once
 
-namespace flp::Vulkan::raw {
+#include <vulkan/vulkan_core.h>
+
+#include <vector>
+
+namespace flp::Vulkan::RAW {
 
 VkRenderPass create_render_pass(
   VkDevice device,

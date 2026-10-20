@@ -1,6 +1,13 @@
 #pragma once
 
-#include "vulkan/raw.hh"
+#include <vulkan/vulkan_core.h>
+
+// #include semver
+
+#include <memory>
+#include <optional>
+#include <string>
+#include <vector>
 
 namespace flp::Vulkan::Managed {
 

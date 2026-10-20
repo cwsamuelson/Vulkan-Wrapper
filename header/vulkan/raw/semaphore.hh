@@ -1,6 +1,8 @@
 #pragma once
 
-namespace flp::Vulkan::raw {
+#include <vulkan/vulkan_core.h>
+
+namespace flp::Vulkan::RAW {
 
 VkSemaphore create_semaphore(VkDevice device, RAW::Allocator allocator);
 

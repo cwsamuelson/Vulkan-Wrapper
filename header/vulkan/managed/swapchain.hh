@@ -1,5 +1,11 @@
 #pragma once
 
+#include <vulkan/vulkan_core.h>
+
+#include <cstdint>
+#include <memory>
+#include <vector>
+
 namespace flp::Vulkan::Managed {
 
 struct Swapchain {
@@ -40,10 +46,17 @@ struct Swapchain {
 
   [[nodiscard]]
   static
-  Pointer create(VkDevice device, VkSurfaceKHR surface, RAW::Allocator allocator, uint32_t image_count,
-                 VkFormat format, VkColorSpaceKHR color_space, VkExtent2D extent,
-                 VkSurfaceTransformFlagBitsKHR pretransform, VkPresentModeKHR present_mode,
-                 const std::vector<uint32_t>& queue_indices);
+  Pointer create(
+    VkDevice device,
+    VkSurfaceKHR surface,
+    RAW::Allocator allocator,
+    uint32_t image_count,
+    VkFormat format,
+    VkColorSpaceKHR color_space,
+    VkExtent2D extent,
+    VkSurfaceTransformFlagBitsKHR pretransform,
+    VkPresentModeKHR present_mode,
+    const std::vector<uint32_t>& queue_indices);
 
   [[nodiscard]]
   static

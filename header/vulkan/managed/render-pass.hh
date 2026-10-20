@@ -1,5 +1,10 @@
 #pragma once
 
+#include <vulkan/vulkan_core.h>
+
+#include <memory>
+#include <vector>
+
 namespace flp::Vulkan::Managed {
 
 struct RenderPass {
@@ -30,11 +35,12 @@ struct RenderPass {
 
   [[nodiscard]]
   static
-  Pointer create(VkDevice device,
-                 RAW::Allocator allocator,
-                 const std::vector<VkAttachmentDescription>& attachments,
-                 const std::vector<VkSubpassDescription>& sub_passes,
-                 const std::vector<VkSubpassDependency>& dependencies);
+  Pointer create(
+    VkDevice device,
+    RAW::Allocator allocator,
+    const std::vector<VkAttachmentDescription>& attachments,
+    const std::vector<VkSubpassDescription>& sub_passes,
+    const std::vector<VkSubpassDependency>& dependencies);
 
   [[nodiscard]]
   static

@@ -1,6 +1,10 @@
 #pragma once
 
-namespace flp::Vulkan::raw {
+#include <vulkan/vulkan_core.h>
+
+#include <vector>
+
+namespace flp::Vulkan::RAW {
 
 VkFramebuffer create_frame_buffer(
   VkDevice device,

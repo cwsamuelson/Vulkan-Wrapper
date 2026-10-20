@@ -1,6 +1,8 @@
 #pragma once
 
-namespace flp::Vulkan::raw {
+#include <vulkan/vulkan_core.h>
+
+namespace flp::Vulkan::RAW {
 
 VkImageView create_image_view(VkDevice device, RAW::Allocator allocator, VkImage image, VkFormat format);
 

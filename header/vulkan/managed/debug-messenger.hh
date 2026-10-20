@@ -1,6 +1,8 @@
 #pragma once
 
-#include "vulkan/raw.hh"
+#include <vulkan/vulkan_core.h>
+
+#include <memory>
 
 namespace flp::Vulkan::Managed {
 

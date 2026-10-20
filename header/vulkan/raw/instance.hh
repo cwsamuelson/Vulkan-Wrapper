@@ -1,6 +1,14 @@
 #pragma once
 
-namespace flp::Vulkan::raw {
+#include <vulkan/vulkan_core.h>
+
+// #include semver
+
+#include <optional>
+#include <string>
+#include <vector>
+
+namespace flp::Vulkan::RAW {
 
 // these should all be specified together
 struct DebugMessengerData {

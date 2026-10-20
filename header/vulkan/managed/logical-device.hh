@@ -1,6 +1,10 @@
 #pragma once
 
-#include "vulkan/raw.hh"
+#include <vulkan/vulkan_core.h>
+
+#include <cstdint>
+#include <memory>
+#include <vector>
 
 namespace fl::pVulkan::Managed {
 
@@ -33,10 +37,11 @@ struct LogicalDevice {
 
   [[nodiscard]]
   static
-  Pointer create(VkPhysicalDevice physical_device,
-                 RAW::Allocator allocator,
-                 const std::vector<uint32_t>& family_indices,
-                 const std::vector<const char*>& extensions);
+  Pointer create(
+    VkPhysicalDevice physical_device,
+    RAW::Allocator allocator,
+    const std::vector<uint32_t>& family_indices,
+    const std::vector<const char*>& extensions);
 
   [[nodiscard]]
   static

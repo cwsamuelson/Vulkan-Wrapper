@@ -1,6 +1,8 @@
 #pragma once
 
-namespace flp::Vulkan::raw {
+#include <vulkan/vulkan_core.h>
+
+namespace flp::Vulkan::RAW {
 
 VkDevice create_device(VkPhysicalDevice physical_device, const VkDeviceCreateInfo* create_info, Allocator allocator);
 
